@@ -1,0 +1,20 @@
+<div class="background">
+  <div class="login-container">
+    <div class="text-container">
+      <h1>Hey Stranger</h1>
+      <p>
+        Want to create an awesome account to access this awesome app? Go ahead
+        and click the button below!
+      </p>
+      <button mat-button routerLink="/register">Sign up</button>
+    </div>
+    <div class="form-container">
+      <h1>Welcome to NgBytes Login</h1>
+      <button class="mat-raised-button" (click)="loginWithGoogle()">
+        Sign In with Google
+      </button>
+      <h5>Or sign in with your email</h5>
+      <ngbytes-login-form (formData)="login($event)"></ngbytes-login-form>
+    </div>
+  </div>
+</div>

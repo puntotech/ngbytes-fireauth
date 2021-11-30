@@ -1,0 +1,22 @@
+<form class="form" [formGroup]="form" (ngSubmit)="onSubmit()">
+  <mat-form-field class="form-control">
+    <mat-label>Email</mat-label>
+    <input matInput formControlName="email" type="text" required />
+    <mat-error *ngIf="email?.hasError('required')">
+      Email is required
+    </mat-error>
+    <mat-error *ngIf="email?.hasError('email')">
+      Email isn't valid. Please enter a valid email.
+    </mat-error>
+  </mat-form-field>
+  <mat-form-field class="form-control">
+    <mat-label>Password</mat-label>
+    <input matInput formControlName="password" type="password" required />
+    <mat-error *ngIf="password?.hasError('required')">
+      Password is required
+    </mat-error>
+  </mat-form-field>
+  <div class="form-footer">
+    <button mat-button type="submit">Submit</button>
+  </div>
+</form>
